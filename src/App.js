@@ -36,19 +36,19 @@ class App extends Component {
   render() {
     // array to hold JSX elements
     let cards = []
-    let card = this.state.hand
+    let hand = this.state.hand
     for (let i=0;i<5;i++){
-      card[i] = "http://golearntocode.com/images/cards/" + card[i] +".png"
-      cards.push(card[i])
+      cards[i] = "http://golearntocode.com/images/cards/" + hand[i] +".png"
+      cards.push(cards[i])
     }
     return (
       <div className="App">
         <h1>
-          <img src= {card[0]} />
-          <img src= {card[1]} />
-          <img src= {card[2]} />
-          <img src= {card[3]} />
-          <img src= {card[4]} />
+          <img src= {cards[0]} />
+          <img src= {cards[1]} />
+          <img src= {cards[2]} />
+          <img src= {cards[3]} />
+          <img src= {cards[4]} />
         </h1>
         <p><button onClick={() => this.shuffleTheDeck()}>Deal a new hand</button></p>
       </div>
